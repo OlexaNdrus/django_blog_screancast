@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY W
 # ARNING: keep the secret key used in production secret!
-SECRET_KEY = '(ho#ak&n04ryzvrm2a*ifzbua9@f%cycg!1fremq0)_zlv=m1i'
+SECRET_KEY = os.environ.get('django-blogER-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['django-blogist.herokuapp.com']
 
 
 # Application definition
@@ -139,4 +139,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('email_user')
 EMAIL_HOST_PASSWORD = os.environ.get('email_password')
+
+
+
 
